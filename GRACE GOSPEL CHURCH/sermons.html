@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sermons - Grace Gospel Church Webuye</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>Grace Gospel Church</h2>
+                <span>Webuye, Kenya</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+                <li class="nav-item"><a href="sermons.html" class="nav-link active">Sermons</a></li>
+                <li class="nav-item"><a href="giving.html" class="nav-link">Giving</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Sermons & Teachings</h1>
+            <p>Listen, watch, and read messages that transform lives</p>
+        </div>
+    </section>
+
+    <!-- Sermon Filters -->
+    <section class="sermon-filters">
+        <div class="container">
+            <div class="filter-options">
+                <button class="filter-btn active" data-filter="all">All Sermons</button>
+                <button class="filter-btn" data-filter="audio">Audio</button>
+                <button class="filter-btn" data-filter="video">Video</button>
+                <button class="filter-btn" data-filter="text">Text</button>
+                <select class="speaker-filter">
+                    <option value="all">All Speakers</option>
+                    <option value="pastor-samuel">Pastor Samuel</option>
+                    <option value="pastor-mathias">Pastor Mathias</option>
+                    <option value="pastor-abdalla">Pastor Abdalla</option>
+                    <option value="guest">Guest Speakers</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sermon List -->
+    <section class="sermon-list">
+        <div class="container">
+            <h2>Recent Sermons</h2>
+            <div class="sermons-grid">
+                <!-- Video Sermon -->
+                <div class="sermon-card" data-type="video" data-speaker="pastor-samuel">
+                    <div class="sermon-media">
+                        <div class="video-thumbnail">
+                            <img src="https://placehold.co/400x225/2c3e50/ffffff" alt="Sermon Thumbnail">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sermon-info">
+                        <span class="sermon-date">October 15, 2023</span>
+                        <h3>From Useless to Useful</h3>
+                        <p class="sermon-speaker">Pastor Samuel Lukusa</p>
+                        <p class="sermon-description">Discover how God can transform your life from uselessness to usefulness through the power of His Word.</p>
+                        <div class="sermon-actions">
+                            <a href="#" class="action-btn"><i class="fas fa-play"></i> Watch</a>
+                            <a href="#" class="action-btn"><i class="fas fa-download"></i> Download</a>
+                            <a href="#" class="action-btn"><i class="fas fa-share"></i> Share</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Audio Sermon -->
+                <div class="sermon-card" data-type="audio" data-speaker="pastor-mathias">
+                    <div class="sermon-media">
+                        <div class="audio-player">
+                            <div class="audio-thumbnail">
+                                <img src="https://placehold.co/400x225/2c3e50/ffffff" alt="Sermon Thumbnail">
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="audio-controls">
+                                <div class="progress-bar">
+                                    <div class="progress"></div>
+                                </div>
+                                <div class="time">00:00 / 45:32</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sermon-info">
+                        <span class="sermon-date">October 8, 2023</span>
+                        <h3>The Power of Renewed Mind</h3>
+                        <p class="sermon-speaker">Pastor Mathias Nakitare</p>
+                        <p class="sermon-description">Learn how renewing your mind according to God's Word can transform your thoughts and actions.</p>
+                        <div class="sermon-actions">
+                            <a href="#" class="action-btn"><i class="fas fa-play"></i> Listen</a>
+                            <a href="#" class="action-btn"><i class="fas fa-download"></i> Download</a>
+                            <a href="#" class="action-btn"><i class="fas fa-share"></i> Share</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Sermon -->
+                <div class="sermon-card" data-type="text" data-speaker="pastor-abdalla">
+                    <div class="sermon-media">
+                        <div class="text-thumbnail">
+                            <img src="https://placehold.co/400x225/2c3e50/ffffff" alt="Sermon Thumbnail">
+                            <div class="text-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sermon-info">
+                        <span class="sermon-date">October 1, 2023</span>
+                        <h3>Living a Transformed Life</h3>
+                        <p class="sermon-speaker">Pastor Abdalla Wamacho</p>
+                        <p class="sermon-description">A study on how to live out the transformation that Christ has worked in our lives through practical steps of faith.</p>
+                        <div class="sermon-actions">
+                            <a href="#" class="action-btn"><i class="fas fa-book-open"></i> Read</a>
+                            <a href="#" class="action-btn"><i class="fas fa-download"></i> Download PDF</a>
+                            <a href="#" class="action-btn"><i class="fas fa-share"></i> Share</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Sermon -->
+                <div class="sermon-card" data-type="video" data-speaker="guest">
+                    <div class="sermon-media">
+                        <div class="video-thumbnail">
+                            <img src="https://placehold.co/400x225/2c3e50/ffffff" alt="Sermon Thumbnail">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sermon-info">
+                        <span class="sermon-date">September 24, 2023</span>
+                        <h3>National Transformation</h3>
+                        <p class="sermon-speaker">Bishop Michael Oloo</p>
+                        <p class="sermon-description">How the gospel of Christ can bring transformation not just to individuals but to entire nations.</p>
+                        <div class="sermon-actions">
+                            <a href="#" class="action-btn"><i class="fas fa-play"></i> Watch</a>
+                            <a href="#" class="action-btn"><i class="fas fa-download"></i> Download</a>
+                            <a href="#" class="action-btn"><i class="fas fa-share"></i> Share</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Audio Sermon -->
+                <div class="sermon-card" data-type="audio" data-speaker="pastor-samuel">
+                    <div class="sermon-media">
+                        <div class="audio-player">
+                            <div class="audio-thumbnail">
+                                <img src="https://placehold.co/400x225/2c3e50/ffffff" alt="Sermon Thumbnail">
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="audio-controls">
+                                <div class="progress-bar">
+                                    <div class="progress"></div>
+                                </div>
+                                <div class="time">00:00 / 38:15</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sermon-info">
+                        <span class="sermon-date">September 17, 2023</span>
+                        <h3>Faith That Moves Mountains</h3>
+                        <p class="sermon-speaker">Pastor Samuel Lukusa</p>
+                        <p class="sermon-description">Understanding the kind of faith that can overcome seemingly impossible situations in our lives.</p>
+                        <div class="sermon-actions">
+                            <a href="#" class="action-btn"><i class="fas fa-play"></i> Listen</a>
+                            <a href="#" class="action-btn"><i class="fas fa-download"></i> Download</a>
+                            <a href="#" class="action-btn"><i class="fas fa-share"></i> Share</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Sermon -->
+                <div class="sermon-card" data-type="text" data-speaker="pastor-mathias">
+                    <div class="sermon-media">
+                        <div class="text-thumbnail">
+                            <img src="https://placehold.co/400x225/2c3e50/ffffff" alt="Sermon Thumbnail">
+                            <div class="text-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sermon-info">
+                        <span class="sermon-date">September 10, 2023</span>
+                        <h3>The Purpose of Prayer</h3>
+                        <p class="sermon-speaker">Pastor Mathias Nakitare</p>
+                        <p class="sermon-description">Exploring the different dimensions of prayer and how it aligns us with God's purposes for our lives.</p>
+                        <div class="sermon-actions">
+                            <a href="#" class="action-btn"><i class="fas fa-book-open"></i> Read</a>
+                            <a href="#" class="action-btn"><i class="fas fa-download"></i> Download PDF</a>
+                            <a href="#" class="action-btn"><i class="fas fa-share"></i> Share</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="load-more">
+                <button class="load-more-btn">Load More Sermons</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sermon Series -->
+    <section class="sermon-series">
+        <div class="container">
+            <h2>Sermon Series</h2>
+            <div class="series-grid">
+                <div class="series-card">
+                    <img src="https://placehold.co/400x225/2c3e50/ffffff" alt="Series Thumbnail">
+                    <div class="series-info">
+                        <h3>Transformation Journey</h3>
+                        <p>8-part series on personal transformation through Christ</p>
+                        <a href="#" class="series-link">View Series</a>
+                    </div>
+                </div>
+                <div class="series-card">
+                    <img src="https://placehold.co/400x225/2c3e50/ffffff" alt="Series Thumbnail">
+                    <div class="series-info">
+                        <h3>Kingdom Principles</h3>
+                        <p>Understanding and applying God's kingdom principles</p>
+                        <a href="#" class="series-link">View Series</a>
+                    </div>
+                </div>
+                <div class="series-card">
+                    <img src="https://placehold.co/400x225/2c3e50/ffffff" alt="Series Thumbnail">
+                    <div class="series-info">
+                        <h3>Power of Prayer</h3>
+                        <p>Learning to pray effectively and see results</p>
+                        <a href="#" class="series-link">View Series</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Links -->
+    <section class="sermon-social">
+        <div class="container">
+            <h2>Follow Us for More Content</h2>
+            <div class="social-platforms">
+                <a href="#" class="platform-link">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube</span>
+                    <p>Watch full sermons and teachings</p>
+                </a>
+                <a href="#" class="platform-link">
+                    <i class="fab fa-facebook"></i>
+                    <span>Facebook</span>
+                    <p>Live streams and updates</p>
+                </a>
+                <a href="#" class="platform-link">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                    <p>Short clips and inspiration</p>
+                </a>
+                <a href="#" class="platform-link">
+                    <i class="fab fa-tiktok"></i>
+                    <span>TikTok</span>
+                    <p>Bite-sized teachings</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Grace Gospel Church</h3>
+                    <p>Webuye Town, Bungoma County<br>Behind Hillside Pharmacy off Lions Junction</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Phone: +254 721 882 216<br>Email: gracegospelchurchwebuye@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Grace Gospel Church - Webuye. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
