@@ -4,13 +4,300 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grace Gospel Church - Webuye</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 1rem;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .logo span {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-item {
+            margin-left: 1.5rem;
+        }
+        
+        .nav-link {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: #8B4513; /* Brown color for church theme */
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #333;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1920x1080') center/cover no-repeat;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #8B4513;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #654321;
+        }
+        
+        /* Welcome Section */
+        .welcome {
+            padding: 5rem 0;
+            background-color: #f9f9f9;
+        }
+        
+        .welcome h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+        
+        .welcome > .container > p {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            font-size: 1.1rem;
+        }
+        
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card h3 {
+            color: #8B4513;
+            border-bottom: 2px solid #8B4513;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Service Times */
+        .service-times {
+            padding: 5rem 0;
+        }
+        
+        .service-times h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+        
+        .schedule {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .schedule-item {
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 2rem;
+        }
+        
+        .schedule-item h3 {
+            color: #8B4513;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .schedule-item ul {
+            list-style: none;
+        }
+        
+        .schedule-item li {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .schedule-item span {
+            font-weight: 600;
+            color: #8B4513;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            color: #8B4513;
+            margin-bottom: 1rem;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: #8B4513;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #555;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background-color: white;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+                padding: 2rem 0;
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-item {
+                margin: 1rem 0;
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
+            }
+        }
+    </style>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
+        <div class="container nav-container">
             <div class="logo">
                 <h2>Grace Gospel Church</h2>
                 <span>Webuye, Kenya</span>
@@ -47,24 +334,23 @@
             <h2>Welcome to Grace Gospel Church</h2>
             <p>Grace Gospel Church – Webuye is a Christ-centered congregation located in Webuye town, Bungoma County, Kenya. The church operates under the covering of Elshadai Harvest Ministry and exists to reveal Christ Jesus, proclaim His transformative work, and guide believers to live a life rooted in faith.</p>
             
-            <div class="mission-vision">
+            <div class="cards-container">
                 <div class="card">
                     <h3>Our Mission</h3>
-                    <p>At Grace gospel Church-Webuye, our mission is to teach,train,equip and send beleivers to live and proclaim the gospel of Jesus Christ with power and purpose.We are committed to grounding lives in God's word, nurturing spiritual growth and raising disciples who reveal christ in communities and beyond.Through sound teachin, practical training and spirit-led qequipping,we prepare beleivers to impact society with godly values and love.Our calling is to send out faithfull witnesses who transform lives,restore hope and advance the kingdom of God both locally and globally forHis glory.(PHILEMON 1:11)</p>
+                    <p>At Grace Gospel Church-Webuye, our mission is to teach, train, equip and send believers to live and proclaim the gospel of Jesus Christ with power and purpose. We are committed to grounding lives in God's word, nurturing spiritual growth and raising disciples who reveal Christ in communities and beyond. Through sound teaching, practical training and spirit-led equipping, we prepare believers to impact society with godly values and love. Our calling is to send out faithful witnesses who transform lives, restore hope and advance the kingdom of God both locally and globally for His glory. (PHILEMON 1:11)</p>
                 </div>
-            </div.>
-            <div>
+                
                 <div class="card">
                     <h3>Our Vision</h3>
-                    <p>From useless to usefulness-revealing Christ, restorinng hope and tranforming lives(LUKE 24:45-49)</p>
+                    <p>From useless to usefulness - revealing Christ, restoring hope and transforming lives (LUKE 24:45-49)</p>
                 </div>
-            </div>
-             
-        </div>
+                
                 <div class="card">
                     <h3>Our Slogan</h3>
-                    <p>To be committed To know Christ,Yes, To know The Power of His Ressurection, And participation of His suffering, Becoming like Him in Death(PHILIP 3:10)</p>
-                <div/>
+                    <p>To be committed to know Christ, Yes, To know The Power of His Resurrection, And participation of His suffering, Becoming like Him in Death (PHILIPPIANS 3:10)</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Service Times -->
@@ -88,7 +374,7 @@
                         <li><span>Mondays:</span> Prayer & Fasting (10am-4pm)</li>
                         <li><span>Tuesdays:</span> Cell Group Meetings</li>
                         <li><span>Thursdays:</span> Prayer & Teaching</li>
-                        <li><span>Fridays:</span> Overnight Kesha(9pm-5am)</li>
+                        <li><span>Fridays:</span> Overnight Kesha (9pm-5am)</li>
                     </ul>
                 </div>
             </div>
@@ -124,7 +410,21 @@
         </div>
     </footer>
 
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+    </script>
 </body>
 </html>
