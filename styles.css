@@ -1975,41 +1975,80 @@ blockquote:after {
 
 .social-platforms {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 1.5rem;
 }
 
-.platform-link {
+.platform-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 1.5rem;
-    background: #f8f9fa;
-    border-radius: 8px;
+    padding: 1.75rem 1.25rem;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #eef2f5;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     text-decoration: none;
     color: #2c3e50;
-    transition: transform 0.3s;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
 }
 
-.platform-link:hover {
-    transform: translateY(-5px);
+.platform-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
 }
 
-.platform-link i {
-    font-size: 2.5rem;
+.platform-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: #2c3e50;
+    transition: all 0.3s ease;
 }
 
-.platform-link span {
-    font-weight: 600;
+.facebook .platform-icon { background: #e7f0ff; color: #1877F2; }
+.youtube .platform-icon { background: #ffe6e6; color: #FF0000; }
+.instagram .platform-icon { background: #fde8f3; color: #E4405F; }
+.tiktok .platform-icon { background: #f0f0f0; color: #000000; }
+.whatsapp .platform-icon { background: #e6f9f0; color: #25D366; }
+.twitter .platform-icon { background: #e8f5fd; color: #1DA1F2; }
+
+.platform-card:hover .platform-icon {
+    transform: scale(1.1);
+}
+
+.facebook:hover .platform-icon { background: #1877F2; color: #ffffff; }
+.youtube:hover .platform-icon { background: #FF0000; color: #ffffff; }
+.instagram:hover .platform-icon { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: #ffffff; }
+.tiktok:hover .platform-icon { background: #000000; color: #ffffff; }
+.whatsapp:hover .platform-icon { background: #25D366; color: #ffffff; }
+.twitter:hover .platform-icon { background: #1DA1F2; color: #ffffff; }
+
+.platform-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #2c3e50;
     margin-bottom: 0.5rem;
 }
 
-.platform-link p {
-    color: #666;
-    font-size: 0.9rem;
+.platform-btn {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #8b4513;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: color 0.3s ease;
+}
+
+.platform-card:hover .platform-btn {
+    color: #2c3e50;
 }
 
 /* Responsive Design */
